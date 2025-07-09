@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:NoWaiste"
+    x:Class="NoWaiste.AppShell"
+    Title="NoWaiste">
+
+    <ShellContent Title="Accueil" ContentTemplate="{DataTemplate local:HomePage}" />
+</Shell>

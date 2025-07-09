@@ -1,0 +1,43 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NoWaiste.ResultatsPage"
+             Title="Résultats"
+             BackgroundColor="White">
+    <ScrollView>
+        <StackLayout Padding="20">
+            <CollectionView x:Name="ItemsView" ItemsSource="{Binding Items}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="LightGray" Padding="10" Margin="5">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding name}" FontAttributes="Bold" VerticalOptions="Center" />
+                                <Label Text="{Binding group}" Margin="10,0" VerticalOptions="Center" />
+                                <Label Text="{Binding score}" VerticalOptions="Center" />
+                                <Button Text="Supprimer"
+                                BackgroundColor="Red"
+                                TextColor="White"
+                                CornerRadius="10"
+                                Padding="5"
+                                HorizontalOptions="EndAndExpand"
+                                Command="{Binding BindingContext.RemoveCommand, Source={x:Reference ItemsView}}"
+                                CommandParameter="{Binding}" />
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
+                <Button Text="Ajouter un aliment"
+                            Margin="0,0,5,0"
+                            BackgroundColor="Green"
+                            TextColor="White"
+                            Clicked="OnAddItemClicked" />
+                <Button Text="Recette" Margin="5,0,0,0"
+                            BackgroundColor="Blue"
+                            TextColor="White"
+                            Clicked="OnRecetteClicked" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

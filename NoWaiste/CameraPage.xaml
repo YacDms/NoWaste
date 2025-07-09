@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NoWaiste.CameraPage"
+             Title="Scanner un aliment">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="25" VerticalOptions="Center">
+
+            <Label Text="Prenez une photo de vos aliments"
+                   FontSize="22"
+                   TextColor="DarkGreen"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Button Text="Prendre une photo"
+                    Clicked="OnTakePhotoClicked"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="12"
+                    HeightRequest="50"
+                    WidthRequest="250"
+                    HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

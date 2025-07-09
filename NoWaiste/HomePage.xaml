@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NoWaiste.HomePage"
+             Title="HomePage">
+
+    <VerticalStackLayout Padding="30" Spacing="25">
+        <Label Text="Bienvenue dans NoWaiste !" FontSize="26" />
+        <Button Text="Prendre une photo"
+                Clicked="OnCameraClicked" />
+    </VerticalStackLayout>
+</ContentPage>

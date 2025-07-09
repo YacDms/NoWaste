@@ -1,0 +1,3 @@
+Microsoft.Maui.Essentials
+SkiaSharp
+SkiaSharp.Views.Maui.Controls
